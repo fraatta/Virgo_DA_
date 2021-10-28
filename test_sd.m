@@ -16,7 +16,7 @@ for b=1:6
     out=SNR_light(sin,sour_inj,in, a, par,TFFT);
     i=i+1;
     tab.par(i)=par;     
-    tab.ddf0(i)=-22-b;
+    tab.a_ddf0(i)=-22-b;
     tab.cr(i)=out.cr;
     tab.SNR(i)=out.SNR.SNR;
          
