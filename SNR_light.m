@@ -1,5 +1,8 @@
 function [out,sour_tempt0]=SNR_light(sin,sour_inj, in, a, par,TFFT)
-
+%This function calculates CR and SNR in three different cases:
+%1)not correcting it, par=1
+%2) correcting truncating at the first order the frequency taylor expansion, par=2
+%3) correcting truncating at the second order the frequency taylor expansion, par=3
 cont=cont_gd(in);
 t0=cont.t0;
 
