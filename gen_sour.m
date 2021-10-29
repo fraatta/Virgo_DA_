@@ -1,4 +1,4 @@
-function sourtot=gen_sour(nsim,int) %genera sorgenti con parametri casuali
+function sourtot=gen_sour(nsim,int) %this function generates nsim source toy models with random parameters. We choose the parameter ranges refering to the ATNF catalogue. 
 
 sour.fepoch=58664; %frequency epoch, 30 giugno 2019
 sour.pepoch=58664; %position epoch
