@@ -1,8 +1,8 @@
 function test_sd(sour_inj,in,a, TFFT,file2save)
 % The function injects a signal in the BSD, using a toy model given in input. 
 % Then, it calculates SNR and CR in three different cases: not correcting the signal
-% correcting stopping the taylor expansion at the first order spin down and 
-%correcting stopping it at the second order spin down, using the function
+% correcting truncating the frequency taylor expansion at the first order and 
+%correcting truncating it at the second order, using the function
 %SNR_light
 % Then, for each case, it calculates CR and SNR.
 
