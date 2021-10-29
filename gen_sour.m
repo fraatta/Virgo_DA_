@@ -1,4 +1,4 @@
-function sourtot=gen_sour(nsim,int) %this function generates nsim source toy models with random parameters. We choose the parameter ranges refering to the ATNF catalogue. 
+function sourtot=gen_sour(nsim,f0_int) %this function generates nsim source toy models with random parameters. We choose the parameter ranges refering to the ATNF catalogue. 
 
 sour.fepoch=58664; %frequency epoch, 30 giugno 2019
 sour.pepoch=58664; %position epoch
@@ -11,7 +11,7 @@ cosi=2*rand(nsim,1)-1;                                   %random uniform distrib
 gamma=sqrt((1+6*cosi.^2+cosi.^4)/4);                     %conversion factor from H0 (Rome) to h (standard) amplitudes H0=h*gamma; on average (1/gamma)=1.31
 eta=-2*cosi./(1+cosi.^2); 
 psi=pi*0.5*rand(nsim,1)-pi*0.25; %uniformly random from -pi/4 to pi/4
-f0= 10 +int*rand(nsim, 1);
+f0= 10 +f0_int*rand(nsim, 1);
 
 for n=1:nsim
     a_h(1)=randi([0 23]);
