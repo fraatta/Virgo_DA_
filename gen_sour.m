@@ -1,13 +1,5 @@
 function sourtot=gen_sour(nsim,int) %genera sorgenti con parametri casuali
 
-% if ~exist('ddf','var')
-%     for 1:nsim
-%     rsd2(nsim)=0;
-%     end
-% else
-%     b=ddf/f;
-%     rsd2= ddf-int*b +2*int*b*rand(nsim, 1);
-% end
 sour.fepoch=58664; %frequency epoch, 30 giugno 2019
 sour.pepoch=58664; %position epoch
 sour.v_a=0;         %intrinsic velocities of the source
@@ -15,7 +7,7 @@ sour.v_d=0;
 sour.name='pulsar';
 
 
-cosi=2*rand(nsim,1)-1;                                   %random uniform distribution for cosi values in [-1;1]
+cosi=2*rand(nsim,1)-1;                                   %random uniform distribution for cos(i) values in [-1;1]
 gamma=sqrt((1+6*cosi.^2+cosi.^4)/4);                     %conversion factor from H0 (Rome) to h (standard) amplitudes H0=h*gamma; on average (1/gamma)=1.31
 eta=-2*cosi./(1+cosi.^2); 
 psi=pi*0.5*rand(nsim,1)-pi*0.25; %uniformly random from -pi/4 to pi/4
@@ -51,8 +43,3 @@ for m=1:nsim
     sour.name=['sim_pulsar_',num2str(m)];
     sourtot(m)=sour;      %contains all the injection parameters, saved as table later
 end
-%tab_sour=struct2table(sourtot); 
-
-
-%tabname=['sourtab_',num2str(fband(1)),'_',num2str(fband(2))];
-%save(tabname,'tab_sour')
