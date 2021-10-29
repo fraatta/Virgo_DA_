@@ -1,7 +1,7 @@
 function search_cand(in,sour,ant,tfft, c1, c2, b1, b2,file2save)
-% The function try to corrects the BSD with values of frequency 
+% The function corrects the BSD with values of frequency 
 % and a first order spin down that range around the values of 
-% the source to be. It is possible to fix the variation range.
+% the candidate source. It is possible to fix the variation range.
 % Then, for each case, it calculates CR and SNR.
 n=n_gd(in);
 dx=dx_gd(in);
