@@ -1,4 +1,4 @@
-function lim_corr_f(in,sour_inj, a,TFFT, file2save)
+function lim_corr_c(in,sour_inj, a,TFFT, file2save)
 %The function injects a signal, using a source toy model given in input, 
 % then it corrects the data changing the frequency of the source toy model, in the range of 
 %7 bins to the right and to the left, for each parameter
