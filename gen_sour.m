@@ -41,5 +41,5 @@ for m=1:nsim
     sour.psi=psi(m);
     sour.gamma=gamma(m);
     sour.name=['sim_pulsar_',num2str(m)];
-    sourtot(m)=sour;      %contains all the injection parameters, saved as table later
+    sourtot(m)=sour;      %contains all the injection parameters
 end
